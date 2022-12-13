@@ -12,6 +12,19 @@ a {
 	text-decoration: none;
 }
 
+a:active {
+	color: #f1faee;
+}
+
+a:hover {
+	text-decoration: underline;
+	color: #f1faee;
+}
+
+a:visited {
+	color: #f1faee;
+}
+
 .header {
 	height: 300px;
 	background: #005f73;
@@ -77,7 +90,7 @@ a {
 	font-size: 64px;
 }
 
-.herobtn-cta {
+.herobtn {
 	background: #ffb703;
 	padding: 10px 80px;
 	font-size: 24px;
@@ -88,6 +101,12 @@ a {
 	cursor: pointer;
 }
 
+.herobtn:hover {
+	background: #005f73;
+	color: #f1faee;
+	text-decoration: none;
+}
+
 .creatures-header {
 	background: #005f73;
 	text-align: center;
@@ -96,9 +115,9 @@ a {
 
 .card-container {
 	display: flex;
-	justify-content: space-between;
-	width: 80%;
-	margin: 0 auto;
+	justify-content: space-around;
+
+	margin: 50px auto 75px auto;
 }
 
 .card {
@@ -136,6 +155,10 @@ a {
 	cursor: pointer;
 }
 
+.card-btn:hover {
+	background: #ffb703;
+}
+
 .footer {
 	background: #005f73;
 }
@@ -145,7 +168,7 @@ a {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	width: 60%;
+	width: 25%;
 	margin: 0 auto;
 }
 
@@ -185,19 +208,25 @@ fieldset {
 	cursor: pointer;
 }
 
+.submit-btn:hover {
+	background: #ffd364;
+}
+
 .social-links {
 	width: 100%;
 	display: flex;
 	justify-content: space-evenly;
-}
-
-.social-link:hover {
-	color: #ffb703;
+	margin-bottom: 20px;
 }
 
 .social-img {
 	height: 35px;
 	width: 35px;
+}
+
+.social-img:hover {
+	border-radius: 50%;
+	border: 3px solid #ffb703;
 }
 
 /* Start Media Queries */
@@ -206,31 +235,32 @@ Used this site for device widths
 https://www.freecodecamp.org/news/css-media-queries-breakpoints-media-types-standard-resolutions-and-more/
 */
 /* Media Query for Mobile Devices and small tablets*/
-@media only screen and (max-width: 767px) {
-	body {
-		background-color: yellow;
-	}
-
+@media only screen and (max-width: 899px) {
 	.nav {
-		padding: 0;
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
-		align-items: center;
 	}
 
 	.nav-logo {
-		width: 50%;
+		width: 90%;
+		display: flex;
+		justify-content: left;
+		align-items: initial;
+	}
+
+	.logo {
+		margin: 0;
+		padding: 0;
 	}
 
 	.hamburger {
-		width: 50%;
-		padding-right: 25px;
+		padding-right: 10px;
 	}
 
 	.hamburger img {
 		display: block;
-		width: 50px;
+		width: 40px;
 		height: auto;
 	}
 
@@ -254,7 +284,6 @@ https://www.freecodecamp.org/news/css-media-queries-breakpoints-media-types-stan
 		justify-content: space-between;
 		align-items: center;
 		width: 96%;
-		margin: 0 auto;
 	}
 
 	.card {
@@ -271,18 +300,18 @@ https://www.freecodecamp.org/news/css-media-queries-breakpoints-media-types-stan
 	.form-container p {
 		text-align: left;
 	}
+
+	.social-links {
+		width: 300px;
+	}
 }
 
 /* Media Query for Tablets */
-@media (min-width: 768px) and (max-width: 1024px) {
-	body {
-		background-color: blue;
-	}
-
+@media (min-width: 900px) and (max-width: 1200px) {
 	.nav {
 		display: flex;
 		flex-direction: row;
-		justify-content: space-between;
+		justify-content: space-evenly;
 		align-items: center;
 	}
 
@@ -302,23 +331,15 @@ https://www.freecodecamp.org/news/css-media-queries-breakpoints-media-types-stan
 
 	.card-container {
 		display: flex;
-		justify-content: space-between;
-		width: 96%;
-		margin: 0 auto;
+		flex-wrap: wrap;
+		justify-content: center;
+		width: 70%;
+		align-items: center;
 	}
 
 	.card {
-		height: 450px;
-		width: 225px;
-		padding: 0px 20px 20px 20px;
-		box-shadow: 6px 10px 15px -2px rgba(0, 0, 0, 0.5);
+		margin: 25px;
 	}
 }
 
-/* Media Query for Laptops and Desktops */
-@media only screen and (min-width: 1025px) {
-	body {
-		background-color: green;
-	}
-}
 /* End Media Queries */
