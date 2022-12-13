@@ -1,0 +1,324 @@
+body {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	color: #f1faee;
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+	line-height: 1.5em;
+	overflow-x: hidden;
+}
+
+a {
+	text-decoration: none;
+}
+
+.header {
+	height: 300px;
+	background: #005f73;
+}
+
+.nav {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	padding-top: 85px;
+}
+
+.nav-logo {
+	height: 50%;
+}
+
+.logo {
+	max-height: 200px;
+	width: 800px;
+	margin: 0 auto;
+}
+
+.nav-links {
+	height: 50%;
+}
+
+.nav-links-list {
+	display: flex;
+	justify-content: center;
+	list-style-type: none;
+}
+
+.link {
+	display: inline-block;
+	padding: 10px 10px;
+}
+
+.hamburger img {
+	display: none;
+}
+
+/* https://www.w3schools.com/howto/howto_css_hero_image.asp */
+.hero-container {
+	height: 500px;
+	background: url("images/hero-background.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+}
+
+.hero-cta {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+}
+
+.hero-cta h1 {
+	font-size: 64px;
+}
+
+.herobtn-cta {
+	background: #ffb703;
+	padding: 10px 80px;
+	font-size: 24px;
+	color: #f1faee;
+	border-radius: 5px;
+	border: none;
+	outline: none;
+	cursor: pointer;
+}
+
+.creatures-header {
+	background: #005f73;
+	text-align: center;
+	padding: 20px 0;
+}
+
+.card-container {
+	display: flex;
+	justify-content: space-between;
+	width: 80%;
+	margin: 0 auto;
+}
+
+.card {
+	height: auto;
+	width: 300px;
+	padding: 0px 20px 20px 20px;
+	box-shadow: 6px 10px 15px -2px rgba(0, 0, 0, 0.5);
+}
+
+.card-header {
+	color: #ffb703;
+}
+
+.card-img {
+	height: auto;
+	width: 90%;
+	margin: 0 auto;
+}
+
+.card-text {
+	text-align: left;
+	color: #005f73;
+}
+
+.card-btn {
+	display: inline-block;
+	width: 100%;
+	padding: 5px 0;
+	background: #005f73;
+	border-radius: 5px;
+	color: #f1faee;
+	text-align: center;
+	border: none;
+	outline: none;
+	cursor: pointer;
+}
+
+.footer {
+	background: #005f73;
+}
+
+.footer-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 60%;
+	margin: 0 auto;
+}
+
+.form-container {
+	margin-bottom: 25px;
+}
+
+.form-heading {
+	color: #ffb703;
+}
+
+fieldset {
+	border: none;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+
+.form input,
+.form textarea {
+	margin-bottom: 10px;
+	padding: 10px;
+	width: 300px;
+}
+
+.submit-btn {
+	background: #ffb703;
+	color: #f1faee;
+	font-size: 18px;
+	border-radius: 5px;
+	padding: 5px 10px;
+	border-radius: 5px;
+	text-align: center;
+	width: 325px;
+	border: none;
+	outline: none;
+	cursor: pointer;
+}
+
+.social-links {
+	width: 100%;
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.social-link:hover {
+	color: #ffb703;
+}
+
+.social-img {
+	height: 35px;
+	width: 35px;
+}
+
+/* Start Media Queries */
+/* 
+Used this site for device widths
+https://www.freecodecamp.org/news/css-media-queries-breakpoints-media-types-standard-resolutions-and-more/
+*/
+/* Media Query for Mobile Devices and small tablets*/
+@media only screen and (max-width: 767px) {
+	body {
+		background-color: yellow;
+	}
+
+	.nav {
+		padding: 0;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.nav-logo {
+		width: 50%;
+	}
+
+	.hamburger {
+		width: 50%;
+		padding-right: 25px;
+	}
+
+	.hamburger img {
+		display: block;
+		width: 50px;
+		height: auto;
+	}
+
+	.nav-links {
+		display: none;
+	}
+
+	.hero-cta {
+		justify-content: center;
+		align-items: center;
+	}
+
+	.hero-cta h1 {
+		text-align: center;
+		font-size: 40px;
+	}
+
+	.card-container {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+		width: 96%;
+		margin: 0 auto;
+	}
+
+	.card {
+		margin-bottom: 50px;
+	}
+
+	.footer {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	.form-container h1,
+	.form-container p {
+		text-align: left;
+	}
+}
+
+/* Media Query for Tablets */
+@media (min-width: 768px) and (max-width: 1024px) {
+	body {
+		background-color: blue;
+	}
+
+	.nav {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.hamburger {
+		padding-right: 25px;
+	}
+
+	.hamburger img {
+		display: block;
+		width: 50px;
+		height: auto;
+	}
+
+	.nav-links {
+		display: none;
+	}
+
+	.card-container {
+		display: flex;
+		justify-content: space-between;
+		width: 96%;
+		margin: 0 auto;
+	}
+
+	.card {
+		height: 450px;
+		width: 225px;
+		padding: 0px 20px 20px 20px;
+		box-shadow: 6px 10px 15px -2px rgba(0, 0, 0, 0.5);
+	}
+}
+
+/* Media Query for Laptops and Desktops */
+@media only screen and (min-width: 1025px) {
+	body {
+		background-color: green;
+	}
+}
+/* End Media Queries */
